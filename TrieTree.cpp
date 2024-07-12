@@ -28,6 +28,7 @@ void getAllResults(vector<string>& results, string word, TrieNode* curr, int& ma
 }
 
 vector<string> TrieTree::search(const string &sentence, int maxResults) {
+    this->history.push_back(sentence);
     vector<string> results;
     TrieNode* curr = root;
     int i = 0, n = sentence.length();
@@ -36,4 +37,8 @@ vector<string> TrieTree::search(const string &sentence, int maxResults) {
     }
     getAllResults(results, sentence, curr, maxResults);
     return results;
+}
+
+vector<string> TrieTree::getHistory() {
+    return this->history;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 void start(TrieTree* searchSuggestion){
-    cout<<"choose an action to proceed the app:\n1) insert search sentences.\n2) search about some word.\n";
+    cout<<"choose an action to proceed the app:\n1) insert search sentences.\n2) search about some word.\n3) print the history\n";
     int choice; cin>>choice;
     if(choice == 1){
         cout<<"how many sentence you want to insert?";
@@ -37,6 +37,16 @@ void start(TrieTree* searchSuggestion){
                 return;
             }
         }
+    }else if(choice == 3){
+        vector<string> history = searchSuggestion->getHistory();
+        if(history.empty()){
+            cout<<"there is no search history."<<endl;
+        }else{
+            for(auto& x: history){
+                cout<<x<<endl;
+            }
+        }
+        start(searchSuggestion);
     }else{
         start(searchSuggestion);
     }
