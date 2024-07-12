@@ -5,11 +5,11 @@
 using namespace std;
 class TrieTree {
     vector<int> history;
-    TrieNode* root;
 public:
+    TrieNode* root;
     TrieTree();
     void insert(const string& sentence);
-    vector<string> search(const string& sentence, const int& maxResults);
+    vector<string> search(const string& sentence, int maxResults);
 };
 
 

@@ -6,9 +6,10 @@
 using namespace std;
 class TrieNode {
 public:
+    char val;
     bool isFull;
-    TrieNode* next[26];
-    TrieNode();
+    vector<TrieNode*> next;
+    TrieNode(char c = 'a');
 };
 
 

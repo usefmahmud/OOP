@@ -1,7 +1,4 @@
 #include "TrieNode.h"
 
-TrieNode::TrieNode(): isFull(false){
-    for(auto& x: next){
-        x = NULL;
-    }
+TrieNode::TrieNode(char c): isFull(false), val(c), next(26, nullptr){
 }
