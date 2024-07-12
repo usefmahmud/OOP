@@ -5,8 +5,9 @@
 
 using namespace std;
 class TrieNode {
-    TrieNode* next[26];
 public:
+    bool isFull;
+    TrieNode* next[26];
     TrieNode();
 };
 
