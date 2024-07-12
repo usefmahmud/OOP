@@ -18,7 +18,9 @@ void start(TrieTree* searchSuggestion){
         start(searchSuggestion);
     }else if(choice == 2){
         cout<<"enter the search word:";
-        string searchWord; cin>>searchWord;
+        cin.ignore();
+        string searchWord;
+        getline(cin, searchWord);
         auto results = searchSuggestion->search(searchWord, 10);
         if(results.empty()){
             cout<<"there is no results with this keyword.\n";

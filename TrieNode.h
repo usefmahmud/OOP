@@ -8,8 +8,9 @@ class TrieNode {
 public:
     char val;
     bool isFull;
-    vector<TrieNode*> next;
-    TrieNode(char c = 'a');
+    unordered_map<char, TrieNode*> next;
+    TrieNode();
+    TrieNode(char c);
 };
 
 
