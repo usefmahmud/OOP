@@ -8,9 +8,11 @@ void start(TrieTree* searchSuggestion){
     if(choice == 1){
         cout<<"how many sentence you want to insert?";
         int insertionCount; cin>>insertionCount;
+        cin.ignore();
         for(int i = 1; i <= insertionCount; i++){
             cout<<"enter sentence number "<<i<<":";
-            string sentence; cin>>sentence;
+            string sentence;
+            getline(cin, sentence);
             searchSuggestion->insert(sentence);
         }
         start(searchSuggestion);
