@@ -16,7 +16,7 @@ void TrieTree::insert(const string &sentence) {
     curr->isFull = true;
 }
 
-void getAllResults(vector<string>& results, string word, TrieNode* curr, int& max){
+void getAllResults(vector<string>& results, const string& word, TrieNode* curr, int& max){
     if(!curr || max <= 0) return;
     if(curr->isFull){
         results.push_back(word);
